@@ -2,6 +2,8 @@ import React from 'react';
 import Carousel from "react-multi-carousel";
 import { Image } from "semantic-ui-react";
 
+import LineChart from "../Charts/Nvd3Chart/LineChart"
+
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -54,7 +56,7 @@ const MyCarousel = ({ deviceType }) => {
     responsive={responsive}
       
     >
-      {images.slice(0, 8).map(image => {
+      {/*   {images.slice(0, 8).map(image => {
         return (
           <Image
             draggable={false}
@@ -62,7 +64,10 @@ const MyCarousel = ({ deviceType }) => {
             src={image}
           />
         );
-      })}
+      })} */
+    }
+    <LineChart ></LineChart>
+
     </Carousel>
   );
 };

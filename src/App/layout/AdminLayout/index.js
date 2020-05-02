@@ -58,13 +58,13 @@ class AdminLayout extends Component {
         return (
             <Aux>
                 <Fullscreen enabled={this.props.isFullScreen}>
-                    <Navigation />
+                 {/* <Navigation />
                     <NavBar />
                     <div className="pcoded-main-container" onClick={() => this.mobileOutClickHandler}>
                         <div className="pcoded-wrapper">
-                            <div className="pcoded-content">
+                            <div className="pcoded-content"> */}
                                 <div className="pcoded-inner-content">
-                                    <Breadcrumb />
+                                    {/* <Breadcrumb /> */}
                                     <div className="main-body">
                                         <div className="page-wrapper">
                                             <Suspense fallback={<Loader/>}>
@@ -76,9 +76,9 @@ class AdminLayout extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            {/* </div>
                         </div>
-                    </div>
+                    </div> */}
                 </Fullscreen>
             </Aux>
         );

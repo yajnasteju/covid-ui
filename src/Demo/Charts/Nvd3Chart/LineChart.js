@@ -8,11 +8,11 @@ function getDatum() {
     for (var i = 0; i < 100; i++) {
         sin.push({
             'x': i,
-            'y': Math.sin(i / 10)
+            'y': Math.random(i )
         });
         sin2.push({
             'x': i,
-            'y': Math.sin(i / 10) * 0.25 + 0.5
+            'y': Math.random(i ) * 0.25 + 0.5
         });
         cos.push({
             'x': i,

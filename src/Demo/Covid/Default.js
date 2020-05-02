@@ -11,6 +11,7 @@ import avatar3 from '../../assets/images/user/avatar-3.jpg';
 import "semantic-ui-css/semantic.min.css";
 import "react-multi-carousel/lib/styles.css";
 import '../../assets/styles.css'
+import BootstrapTable from '../Tables/BootstrapTable';
 
 class Covid extends React.Component {
     render() {
@@ -120,8 +121,8 @@ class Covid extends React.Component {
                             <MyCarousel deviceType="desktop"></MyCarousel>
                         
                     </Col>
-                    <Col md={6} xl={4}>
-                        
+                    <Col md={1.5} >
+                        <BootstrapTable>    </BootstrapTable>
                     </Col>
                     <Col md={6} xl={4}>
                         <Card className='card-social'>
@@ -274,19 +275,7 @@ class Covid extends React.Component {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={6} xl={8} className='m-b-30'>
-                        <Tabs defaultActiveKey="today" id="uncontrolled-tab-example">
-                            <Tab eventKey="today" title="Today">
-                                {tabContent}
-                            </Tab>
-                            <Tab eventKey="week" title="This Week">
-                                {tabContent}
-                            </Tab>
-                            <Tab eventKey="all" title="All">
-                                {tabContent}
-                            </Tab>
-                        </Tabs>
-                    </Col>
+                    
                 </Row>
             </Aux>
         );

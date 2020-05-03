@@ -38,25 +38,61 @@ const images = [
 
 // Because this is an inframe, so the SSR mode doesn't not do well here.
 // It will work on real devices.
-const MyCarousel = ({ deviceType }) => {
+class MyCarousel extends React.Component{
+
+      
+  intervalID;
+  state = {
+    rand: "100",
+  }
+
+  componentDidMount() {
+    this.getData();
+
+    /*
+      Now we need to make it run at a specified interval,
+      bind the getData() call to `this`, and keep a reference
+      to the invterval so we can clear it later.
+    */
+   this.intervalID = setInterval(this.getData.bind(this), 5000);
+  }
+
+  componentWillUnmount() {
+    /*
+      stop getData() from continuing to run even
+      after unmounting this component. Notice we are calling
+      'clearTimeout()` here rather than `clearInterval()` as
+      in the previous example.
+    */
+    clearInterval(this.intervalID);
+  }
+
+  getData = () => {
+    this.setState({
+        rand : Math.random( 100000)
+    });
+}
+
+render() {
   return (
     <Carousel
     swipeable={false}
     draggable={false}
     showDots={true}
     arrows = {false}
-    autoPlay
-    autoPlaySpeed={2000}
+    //autoPlay
+    //autoPlaySpeed={20000}
     infinite
     customTransition="transform 300ms ease-in-out"
     ssr
     partialVisbile
-    deviceType={deviceType}
+    deviceType="desktop"
     itemClass="image-item"
     responsive={responsive}
       
     >
-      {/*   {images.slice(0, 8).map(image => {
+      {
+      /*   {images.slice(0, 8).map(image => {
         return (
           <Image
             draggable={false}
@@ -70,6 +106,7 @@ const MyCarousel = ({ deviceType }) => {
 
     </Carousel>
   );
+}
 };
 
 export default MyCarousel;

@@ -40,6 +40,39 @@ function getDatum() {
 }
 
 class LineChart extends React.Component {
+    
+    intervalID;
+      state = {
+        rand : "100"
+      }
+
+      componentDidMount() {
+        this.getData();
+
+        /*
+          Now we need to make it run at a specified interval,
+          bind the getData() call to `this`, and keep a reference
+          to the invterval so we can clear it later.
+        */
+       this.intervalID = setInterval(this.getData.bind(this), 5000);
+      }
+
+      componentWillUnmount() {
+        /*
+          stop getData() from continuing to run even
+          after unmounting this component. Notice we are calling
+          'clearTimeout()` here rather than `clearInterval()` as
+          in the previous example.
+        */
+        clearInterval(this.intervalID);
+      }
+
+      getData = () => {
+        this.setState({
+            rand : Math.random( 100000)
+        });
+    }
+
 
     render() {
         const data = getDatum();

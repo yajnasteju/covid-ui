@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from "react-multi-carousel";
 import { Image } from "semantic-ui-react";
 
-import BootstrapTable from '../Tables/BootstrapTable';
+import LatesUpdatesTable from '../Tables/LatesUpdatesTable';
 
 const responsive = {
   desktop: {
@@ -77,10 +77,10 @@ render() {
     responsive={responsive}
       
     >
-        <BootstrapTable></BootstrapTable> 
-        <BootstrapTable></BootstrapTable> 
-        <BootstrapTable></BootstrapTable> 
-        <BootstrapTable></BootstrapTable>      
+        <LatesUpdatesTable></LatesUpdatesTable> 
+        <LatesUpdatesTable></LatesUpdatesTable> 
+        <LatesUpdatesTable></LatesUpdatesTable> 
+        <LatesUpdatesTable></LatesUpdatesTable>      
     </Carousel>
   );
 }

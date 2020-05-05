@@ -72,8 +72,7 @@ class Covid extends React.Component {
                                 
                             </Col>
                             <Col md={6}>
-                                <LatesUpdatesTable></LatesUpdatesTable>
-                                
+                                <LatesUpdatesTable></LatesUpdatesTable>                                
                             </Col>
 
                         </Row>
@@ -127,7 +126,11 @@ class Covid extends React.Component {
                         <BootstrapTable>    </BootstrapTable>
                     </Col>
                     <Col md={2} >
-                        <BootstrapTable>    </BootstrapTable>
+                    <div class="microsoft container">
+                        <p class="marquee">
+                            <BootstrapTable>    </BootstrapTable>
+                        </p>
+                    </div>
                     </Col>
                 </Row>
                 

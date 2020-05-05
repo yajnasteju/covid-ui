@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import Aux from "../../hoc/_Aux";
 
-class LatesUpdatesTable extends React.Component {
+class Top5Table extends React.Component {
     
     constructor(props) {
         super(props) 
@@ -30,7 +30,11 @@ class LatesUpdatesTable extends React.Component {
       getData = () => {
 
         var th = this;
-        axios.get("http://127.0.0.1/cumulative/1.json").then(function(data) {
+        var f = JSON.stringify(this.props.file);
+        var url = "http://127.0.0.1/top5/" + JSON.parse(f);
+        console.log("File url " + url);
+
+        axios.get(url).then(function(data) {
             console.log("Fetched data "+ JSON.stringify(data.data));
             th.setState({
                 countries: data.data.countries
@@ -71,7 +75,7 @@ class LatesUpdatesTable extends React.Component {
                         <Table responsive = { false }
                             bordered striped size = "sm">
                             <thead>
-                                Top 5 Updates
+                                {this.props.header}
                             </thead>
                             <tbody>
                                {this.renderTableData()}
@@ -84,4 +88,4 @@ class LatesUpdatesTable extends React.Component {
     }
 }
 
-export default LatesUpdatesTable;
+export default Top5Table;

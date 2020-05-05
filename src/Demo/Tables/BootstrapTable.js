@@ -30,19 +30,22 @@ class BootstrapTable extends React.Component {
       getData = () => {
 
         var th = this;
-        axios.get("http://127.0.0.1/cumulative/1.json").then(function(data) {
+        var f = JSON.stringify(this.props.file);
+        var url = "http://127.0.0.1/cumulative/" + JSON.parse(f);
+        console.log("File url " + url);
+
+        axios.get(url).then(function(data) {
             console.log("Fetched data "+ JSON.stringify(data.data));
             th.setState({
                 countries: data.data.countries
             });
           });
-        // Fetch from json and set here 
         
     }
 
     renderTableData() {
         console.log("teju : " + JSON.parse(JSON.stringify(this.state)));
-        return this.state.countries.slice(0,120).map((country, index) => {
+        return this.state.countries.map((country, index) => {
            const {  flag ,name , cases, dead, rec } = country //destructuring
            return (
             <tr>
@@ -54,8 +57,8 @@ class BootstrapTable extends React.Component {
                 </span>
                 <p>
                     <span class="badge badge-warning ml-1">{cases}</span>
-                    <span class="badge badge-success ml-1">{dead}</span>
-                    <span class="badge badge-danger ml-1">{rec}</span>
+                    <span class="badge badge-success ml-1">{rec}</span>
+                    <span class="badge badge-danger ml-1">{dead}</span>
                 </p>
             </tr>
         

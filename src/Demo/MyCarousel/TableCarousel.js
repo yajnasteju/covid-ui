@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import { Image } from "semantic-ui-react";
 
 import LatesUpdatesTable from '../Tables/LatesUpdatesTable';
+import Top5Table from '../Tables/Top5Table';
 
 const responsive = {
   desktop: {
@@ -66,21 +67,27 @@ render() {
     draggable={false}
     showDots={true}
     arrows = {false}
-    //autoPlay
-    //autoPlaySpeed={20000}
+    autoPlay
+    autoPlaySpeed={5000}
     infinite
     customTransition="transform 300ms ease-in-out"
     ssr
     partialVisbile
     deviceType="desktop"
     itemClass="image-item"
-    responsive={responsive}
-      
-    >
-        <LatesUpdatesTable></LatesUpdatesTable> 
-        <LatesUpdatesTable></LatesUpdatesTable> 
-        <LatesUpdatesTable></LatesUpdatesTable> 
-        <LatesUpdatesTable></LatesUpdatesTable>      
+    responsive={responsive}>
+
+      <Top5Table file = "Top5_North America.json"
+                  header = "Top 5 North America"></Top5Table> 
+      <Top5Table file = "Top5_South America.json"
+                  header = "Top 5 South America"></Top5Table>                       
+      <Top5Table file = "Top5_Europe.json"
+                  header = "Top 5 Europe"></Top5Table>                       
+      <Top5Table file = "Top5_Asia.json"
+                  header = "Top 5 Asia"></Top5Table>                       
+      <Top5Table file = "Top5_Africa.json"
+                  header = "Top 5 Africa"></Top5Table>                       
+  
     </Carousel>
   );
 }

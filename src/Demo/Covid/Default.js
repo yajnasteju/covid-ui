@@ -6,6 +6,7 @@ import DEMO from "../../store/constant";
 import MyCarousel from "../MyCarousel";
 
 import BootstrapTable from '../Tables/BootstrapTable';
+
 import TableCarousel from '../MyCarousel/TableCarousel'
 
 import avatar1 from '../../assets/images/user/avatar-1.jpg';
@@ -121,15 +122,15 @@ class Covid extends React.Component {
                     </Col>
 
                     <Col md={2} style={{padding : 0} } >
-                        <BootstrapTable>    </BootstrapTable>
+                        <BootstrapTable file = "1.json">    </BootstrapTable>
                     </Col>
                     <Col md={2} style={{paddingRight : 0}} >
-                        <BootstrapTable>    </BootstrapTable>
+                        <BootstrapTable file = "2.json">    </BootstrapTable>
                     </Col>
                     <Col md={2} style={{padding:  0}}>
                     <div class="microsoft container">
                         <p class="marquee">
-                            <BootstrapTable>    </BootstrapTable>
+                            <BootstrapTable file = "3.json">    </BootstrapTable>
                         </p>
                     </div>
                     </Col>

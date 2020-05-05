@@ -119,13 +119,14 @@ class Covid extends React.Component {
 
                         </Row>
                     </Col>
-                    <Col md={2} >
+
+                    <Col md={2} style={{padding : 0} } >
                         <BootstrapTable>    </BootstrapTable>
                     </Col>
-                    <Col md={2} >
+                    <Col md={2} style={{paddingRight : 0}} >
                         <BootstrapTable>    </BootstrapTable>
                     </Col>
-                    <Col md={2} >
+                    <Col md={2} style={{padding:  0}}>
                     <div class="microsoft container">
                         <p class="marquee">
                             <BootstrapTable>    </BootstrapTable>

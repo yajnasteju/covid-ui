@@ -103,6 +103,8 @@ render() {
       })} */
     }
     <LineChart ></LineChart>
+    <LineChart ></LineChart>
+    <LineChart ></LineChart>
 
     </Carousel>
   );

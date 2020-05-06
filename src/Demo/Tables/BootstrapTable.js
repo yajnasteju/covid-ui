@@ -56,9 +56,10 @@ class BootstrapTable extends React.Component {
                     {name}
                 </span>
                 <p>
-                    <span class="badge badge-warning ml-1">{cases}</span>
-                    <span class="badge badge-success ml-1">{rec}</span>
-                    <span class="badge badge-danger ml-1">{dead}</span>
+                            <span class="badge badge-warning ml-1">{cases}</span>
+                            <span class="badge badge-success ml-1">{rec}</span>
+                            <span class="badge badge-danger ml-1">{dead}</span>
+                    
                 </p>
             </tr>
         

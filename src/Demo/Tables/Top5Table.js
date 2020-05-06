@@ -75,7 +75,7 @@ class Top5Table extends React.Component {
                         <Table responsive = { false }
                             bordered striped size = "sm">
                             <thead>
-                                {this.props.header}
+                                <span className="d-block text-uppercase">{this.props.header}</span>
                             </thead>
                             <tbody>
                                {this.renderTableData()}

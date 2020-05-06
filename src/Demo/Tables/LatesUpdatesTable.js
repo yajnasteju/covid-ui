@@ -71,7 +71,7 @@ class LatesUpdatesTable extends React.Component {
                         <Table responsive = { false }
                             bordered striped size = "sm">
                             <thead>
-                                Top 5 Updates
+                            <span className="d-block text-uppercase">Top 5 Updates</span>
                             </thead>
                             <tbody>
                                {this.renderTableData()}

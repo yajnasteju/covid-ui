@@ -7,7 +7,8 @@ import MyCarousel from "../MyCarousel";
 
 import BootstrapTable from '../Tables/BootstrapTable';
 
-import TableCarousel from '../MyCarousel/TableCarousel'
+import TableCarousel from '../MyCarousel/TableCarousel';
+import CounterCard from '../Other/CounterCard';
 
 import avatar1 from '../../assets/images/user/avatar-1.jpg';
 import avatar2 from '../../assets/images/user/avatar-2.jpg';
@@ -25,44 +26,15 @@ class Covid extends React.Component {
                     <Col md={6}>
                         <Row>
                             <Col md={4}>
-                                <Card>
-                                    <Card.Body>
-                                        <h6 className='mb-4 '>Total Infected</h6>
-                                        <div className="row d-flex align-items-center">
-                                            <div className="col-9">
-                                                <h3 className="f-w-300 d-flex align-items-center m-b-0">
-                                                    <i className="feather text-c-red f-30 m-r-5"/>2,456,777</h3>
-                                            </div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
+                                <CounterCard type = "cases"></CounterCard>
                             </Col>
                             <Col md={4}>
-                                <Card>
-                                    <Card.Body>
-                                        <h6 className='mb-4 '>Total Deceased</h6>
-                                        <div className="row d-flex align-items-center">
-                                            <div className="col-9">
-                                                <h3 className="f-w-300 d-flex align-items-center m-b-0">
-                                                    <i className="feather text-c-red f-30 m-r-5"/>2,456,777</h3>
-                                            </div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
+                                <CounterCard type = "recovered"></CounterCard>
                             </Col>
                             <Col md={4}>
-                                <Card>
-                                    <Card.Body>
-                                        <h6 className='mb-4 '>Total Deceased</h6>
-                                        <div className="row d-flex align-items-center">
-                                            <div className="col-9">
-                                                <h3 className="f-w-300 d-flex align-items-center m-b-0">
-                                                    <i className="feather text-c-red f-30 m-r-5"/>2,456,777</h3>
-                                            </div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
+                                <CounterCard type = "dead"></CounterCard>
                             </Col>
+                            
                         
                         </Row>
                         <MyCarousel></MyCarousel>
@@ -72,53 +44,12 @@ class Covid extends React.Component {
                                 <TableCarousel></TableCarousel>
                                 
                             </Col>
-                            <Col md={6}>
+                            <Col md={6} style={{paddingTop : 18}}>
                                 <LatesUpdatesTable></LatesUpdatesTable>                                
                             </Col>
 
                         </Row>
-                        <Row>
-                            <Col md={4}>
-                                <Card>
-                                    <Card.Body>
-                                        <h6 className='mb-4 '>Total Infected</h6>
-                                        <div className="row d-flex align-items-center">
-                                            <div className="col-9">
-                                                <h3 className="f-w-300 d-flex align-items-center m-b-0">
-                                                    <i className="feather text-c-red f-30 m-r-5"/>2,456,777</h3>
-                                            </div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                            <Col md={4}>
-                                <Card>
-                                    <Card.Body>
-                                        <h6 className='mb-4 '>Total Deceased</h6>
-                                        <div className="row d-flex align-items-center">
-                                            <div className="col-9">
-                                                <h3 className="f-w-300 d-flex align-items-center m-b-0">
-                                                    <i className="feather text-c-red f-30 m-r-5"/>2,456,777</h3>
-                                            </div>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                            <Col md={4}>
-                        <Card>
-                            <Card.Body>
-                                <h6 className='mb-4 '>Total Recovered</h6>
-                                <div className="row d-flex align-items-center">
-                                    <div className="col-9">
-                                        <h3 className="f-w-300 d-flex align-items-center m-b-0">
-                                            <i className="feather text-c-red f-30 m-r-5"/>2,456,777</h3>
-                                    </div>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-
-                        </Row>
+                       
                     </Col>
 
                     <Col md={2} style={{padding : 0} } >
